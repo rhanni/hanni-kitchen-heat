@@ -7,15 +7,26 @@ class PostList extends React.Component {
       posts: Array(5).fill('hello'),
     };
   }
+
+  renderPost(i) {
+    //console.log(this.posts[i]);
+    return <Post value={this.props.posts[i]} />;
+    //return this.posts[i];
+  }
+
   render() {
-    return 'this is here';
+    return (
+      <div>
+        <div>this is here</div>
+        <div>{this.renderPost(1)}</div>
+      </div>
+    );
   }
 }
 
-class Post extends React.Component {}
-
-function addPost(props) {
-  return <button></button>;
+function Post(props) {
+  console.log(props.posts);
+  return <li>{props.value}</li>;
 }
 
 export default PostList;
