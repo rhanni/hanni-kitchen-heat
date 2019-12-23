@@ -1,6 +1,8 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
+import PostList from './components/PostList';
+
 function App() {
   return (
     <div className='App'>
@@ -84,6 +86,9 @@ function App() {
       <header className='App-header'>
         <p>Welcome to Kitchen Heat - A blog by Ryan Hanni</p>
       </header>
+      <div className='post-list'>
+        <PostList></PostList>
+      </div>
     </div>
   );
 }
