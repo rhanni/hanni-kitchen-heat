@@ -4,28 +4,25 @@ class PostList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: Array(5).fill('hello'),
+      posts: Array(5).fill('hello1'),
     };
   }
 
   renderPost(i) {
-    //console.log(this.posts[i]);
-    return <Post value={this.props.posts[i]} />;
-    //return this.posts[i];
+    return <Post value={this.state.posts[i]} />;
   }
 
   render() {
     return (
       <div>
         <div>this is here</div>
-        <div>{this.renderPost(1)}</div>
+        <div>{this.state.posts[1]}</div>
       </div>
     );
   }
 }
 
 function Post(props) {
-  console.log(props.posts);
   return <li>{props.value}</li>;
 }
 
